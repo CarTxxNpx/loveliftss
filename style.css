@@ -1,0 +1,115 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-image: <img src="URL_ของภาพ">;
+}
+
+
+/* ใช้พื้นหลังสีชมพูอ่อนตามที่คุณต้องการ */
+body {
+    background-color: ;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 20px;
+    background-image: url('https://i.pinimg.com/564x/0d/7c/90/0d7c9055a92021060c27332593f0cb81.jpg');
+    /* background-size: cover; ทำให้ภาพครอบคลุมพื้นที่ทั้งหมด */
+    background-position: center; /* จัดตำแหน่งภาพให้อยู่ตรงกลาง */
+    /* background-repeat: no-repeat; ป้องกันการทำซ้ำของภาพ */
+    margin: 0;
+    height: 100vh; /*ให้สูง 100% ของ viewport height
+}
+
+/* ปรับปรุงคอนเทนเนอร์ */
+.container {
+    background-image: linear-gradient(to right,#f8bbd0,#daeaf1,#fac3d6);
+    padding: 20px;
+    border-radius: 34px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 2);
+    width: 1200px;
+    margin-left: 50%m;
+    text-align: left;
+    justify-content: center;
+}
+
+/* ทำให้หัวข้อมีการจัดตำแหน่งที่ดีขึ้น */
+h1 {
+    color: #d81b60;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+/* ปรับปรุงการจัดการฟอร์ม */
+.form {
+    margin-bottom: 1.5rem;
+}
+
+/* ปรับรูปแบบของป้ายกำกับ */
+.form-label {
+    font-weight: 700;
+    color: #333;
+    font-size: 18px;
+    border-radius: 25px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);
+    padding: 8px;
+}
+
+/* ปรับปรุงปุ่ม */
+.btn-primary {
+    background-color: #d81b60;
+    border-color: #d81b60;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-top: 50px;
+}
+
+.btn-primary:hover {
+    background-color: #c2185b;
+    border-color: #c2185b;
+}
+
+/* ปรับปรุงแบบฟอร์มและป้ายกำกับ */
+.form-check-label {
+    margin-left: 0.5rem;
+    font-weight: 400;
+}
+
+/* ทำให้ป้ายคำถามมีขนาดใหญ่ขึ้น */
+h2 {
+    color: #d81b60;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.form-check {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-check-input {
+    padding: 10px;
+}
+
+#resultPage {
+    padding: 20px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+}

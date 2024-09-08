@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การประเมินตนเอง</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.13.3/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">แบบประเมินตนเอง</h1>
+        <div class="alert alert-info alert-dismissible fade show" role="alert" id="infoAlert">
+            <strong>คำชี้แจง:</strong>คำแนะนำในการทดสอบต่อไปนี้เป็นปัญหาที่ อาจเกิดขึ้นกับคุณ
+            โปรดอ่านแต่ละข้ออย่างรอบคอบ หลังจากที่อ่านแล้วให้เลือกคำตอบที่ตรงกับตัวของคุณ มากที่สุด
+            ว่าอาการหรือความรู้สึกนี้ได้รบกวนคุณมาก น้อยเพียงใดในช่วงระยะเวลา 2-4 สัปดาห์ ที่ผ่านมา
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <!-- แบบประเมินชุดที่ 1 (5 ข้อ) -->
+        <form id="mainAssessment" class="mt-4">
+            <p class="text-center text-muted">โปรดตอบคำถามตามความรู้สึกของคุณ</p>
+
+            <hr>
+            <label class="form-label">1. มีปัญหาการนอน นอนไม่หลับหรือนอนมาก?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q1" value="0" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    เป็นน้อยมากหรือแทบไม่มี
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q1" value="1" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    เป็นบางครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q1" value="2" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    เป็นบ่อยครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q1" value="3" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                    เป็นประจำ
+                </label>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <label class="form-label">2. มีสมาธิน้อยลง?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q2" value="0" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    เป็นน้อยมากหรือแทบไม่มี
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q2" value="1" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    เป็นบางครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q2" value="2" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    เป็นบ่อยครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q2" value="3" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                    เป็นประจำ
+                </label>
+            </div>
+            <br>
+            <hr>
+            <br>
+
+            <label class="form-label">3. หงุดหงิด กระวนกระวาย วุ่นวายใจ?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q3" value="0" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    เป็นน้อยมากหรือแทบไม่มี
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q3" value="1" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    เป็นบางครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q3" value="2" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    เป็นบ่อยครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q3" value="3" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                    เป็นประจำ
+                </label>
+            </div>
+            <br>
+            <hr>
+            <br>
+
+            <label class="form-label">4. รู้สึกเบื่อเซ็ง?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q4" value="0" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    เป็นน้อยมากหรือแทบไม่มี
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q4" value="1" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    เป็นบางครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q4" value="2" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    เป็นบ่อยครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q4" value="3" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                    เป็นประจำ
+                </label>
+            </div>
+            <br>
+            <hr>
+            <br>
+
+            <label class="form-label">5. ไม่อยากพบปะผู้คน?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q5" value="0" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    เป็นน้อยมากหรือแทบไม่มี
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q5" value="1" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    เป็นบางครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q5" value="2" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    เป็นบ่อยครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="q5" value="3" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                    เป็นประจำ
+                </label>
+            </div>
+            <br>
+            <hr>
+
+            <button type="submit" class="btn btn-primary">ส่งแบบประเมิน</button>
+        </form>
+
+        <!-- แบบประเมินเพิ่มเติม 2 ข้อ (แสดงเมื่อจำเป็น) -->
+        <form id="additionalAssessment1" class="mt-4" style="display: none;">
+            <h2 class="text-center">แบบคัดกรองโรคซึมเศร้าด้วย 2 คำถาม </h2>
+
+            <label class="form-label">1.ใน 2 สัปดาห์ที่ผ่านมารวมวันนี้
+                "ท่านรู้สึกหดหูเศร้าหรือท้อแท้สิ้นหวังหรือไม่?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="extraQ1" value="yes" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    ใช่
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="extraQ1" value="no" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    ไม่ใช่
+                </label>
+            </div>
+
+            <br>
+            <hr>
+            <br>
+
+            <label class="form-label">2. ใน 2 สัปดาห์ที่ผ่านมารวมวันนี้" ท่านรู้สึกเบื่อ
+                ทำอะไรก็ไม่เพลิดเพลินหรือไม่?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="extraQ2" value="yes" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    ใช่
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="extraQ2" value="no" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    ไม่ใช่
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">ส่งแบบประเมินเพิ่มเติม</button>
+        </form>
+
+        <!-- แบบประเมินเพิ่มเติม 9 ข้อ (แสดงเมื่อจำเป็น) -->
+        <form id="additionalAssessment2" class="mt-4" style="display: none;">
+            <h2 class="text-center">แบบประเมินโรคซึมเศร้าด้วย 9 คำถาม </h2>
+            <p class="text-center text-muted">ใน 2 สัปดาห์ที่ผ่านมารวมวันนี้ท่านมีอาการเหล่านี้บ่อยแค่ไหน</p>
+
+            <!-- คำถามเพิ่มเติม 9 ข้อจะอยู่ที่นี่ -->
+            <!-- ตัวอย่างคำถาม -->
+            <label class="form-label">1. เบื่อ ไม่สนใจทำอะไร?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ1" value="0" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    เป็นน้อยมากหรือแทบไม่มี
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ1" value="1" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    เป็นบางครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ1" value="2" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    เป็นบ่อยครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ1" value="3" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                    เป็นประจำ
+                </label>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <label class="form-label">2. ไม่สบายใจ ซึมเศร้า ท้อแท้?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ2" value="0" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    เป็นน้อยมากหรือแทบไม่มี
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ2" value="1" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    เป็นบางครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ2" value="2" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    เป็นบ่อยครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ2" value="3" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                    เป็นประจำ
+                </label>
+            </div>
+            <br>
+            <hr>
+            <br>
+
+            <label class="form-label">3. หลับยากหรือหลับๆ ตื่นๆ หรือหลับมากไป?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ3" value="0" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    เป็นน้อยมากหรือแทบไม่มี
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ3" value="1" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    เป็นบางครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ3" value="2" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    เป็นบ่อยครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ3" value="3" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                    เป็นประจำ
+                </label>
+            </div>
+            <br>
+            <hr>
+            <br>
+
+            <label class="form-label">4. เหนื่อยง่ายหรือไม่ค่อยมีแรง?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ4" value="0" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    เป็นน้อยมากหรือแทบไม่มี
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ4" value="1" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    เป็นบางครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ4" value="2" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    เป็นบ่อยครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ4" value="3" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                    เป็นประจำ
+                </label>
+            </div>
+            <br>
+            <hr>
+            <br>
+
+            <label class="form-label">5. เบื่ออาหาร หรือกินมากเกินไป?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ5" value="0" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    เป็นน้อยมากหรือแทบไม่มี
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ5" value="1" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    เป็นบางครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ5" value="2" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    เป็นบ่อยครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ5" value="3" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                    เป็นประจำ
+                </label>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <label class="form-label">6. รู้สึกไม่ดีกับตัวเอง คิดว่าตัวเองล้มเหลว
+                หรือทำให้ตนเองหรือครอบครัวผิดหวัง?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ6" value="0" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    เป็นน้อยมากหรือแทบไม่มี
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ6" value="1" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    เป็นบางครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ6" value="2" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    เป็นบ่อยครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ6" value="3" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                    เป็นประจำ
+                </label>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <label class="form-label">7. สมาธิไม่ดีเวลาทำอะไร เช่น ดูโทรทัศน์ฟังวิทยุ
+                หรือทำงานที่ต้องใช้ความตั้งใจ?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ7" value="0" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    เป็นน้อยมากหรือแทบไม่มี
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ7" value="1" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    เป็นบางครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ7" value="2" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    เป็นบ่อยครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ7" value="3" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                    เป็นประจำ
+                </label>
+            </div>
+            <br>
+            <hr>
+            <br>
+
+            <label class="form-label">8. พูดช้า ทำอะไรช้าลง จนคนอื่นสังเกตเห็นได้
+                หรือกระสับกระส่ายไม่สามารถอยู่นิ่งได้ เหมือนที่เคยเป็น?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ8" value="0" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    เป็นน้อยมากหรือแทบไม่มี
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ8" value="1" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    เป็นบางครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ8" value="2" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    เป็นบ่อยครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ8" value="3" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                    เป็นประจำ
+                </label>
+            </div>
+            <br>
+            <hr>
+            <br>
+
+            <label class="form-label">9. คิดทำร้ายตนเองหรือคิดว่าถ้าตายไปคงจะดี?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ9" value="0" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    เป็นน้อยมากหรือแทบไม่มี
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ9" value="1" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    เป็นบางครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ9" value="2" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    เป็นบ่อยครั้ง
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="addQ9" value="3" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                    เป็นประจำ
+                </label>
+            </div>
+            <br>
+            <hr>
+            <br>
+
+            <button type="submit" class="btn btn-primary">ส่งแบบประเมิน</button>
+        </form>
+
+        <!-- แบบประเมินขั้นสุดท้าย 8 ข้อ (แสดงเมื่อจำเป็น) -->
+        <form id="finalAssessment" class="mt-4" style="display: none;">
+            <h2 class="text-center">แบบประเมินการฆ่าตัวตาย 8 คำถาม</h2>
+            <p class="text-center text-muted">คะแนน 1-8 คะแนน หมายถึง แนวโน้มที่จะฆ่าตัวตายระดับน้อย </p>
+            <p class="text-center text-muted">คะแนน 9-16 คะแนน หมายถึง แนวโน้มที่จะฆ่าตัวตายระดับปานกลาง</p>
+            <p class="text-center text-muted">คะแนน ≥ 17 คะแนน หมายถึง แนวโน้มที่จะฆ่าตัวตายระดับรุนแรง</p><br>
+
+            <!-- ตัวอย่างคำถามเพิ่มเติม 8 ข้อ -->
+            <label class="form-label">1. คุณรู้สึกว่าคุณได้รับการสนับสนุนจากคนรอบข้างหรือไม่?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="finalQ1" value="1" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    ใช่
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="finalQ1" value="0" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    ไม่ใช่
+                </label>
+            </div>
+
+            <br>
+            <hr>
+            <br>
+
+            <label class="form-label">2. ตั้งแต่เดือนก่อนจนถึงวันนี้อยากทำร้ายตัวเองหรือทำให้ตัวเองบาดเจ็บ?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="finalQ2" value="2" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    ใช่
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="finalQ2" value="0" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    ไม่ใช่
+                </label>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <label class="form-label">3. ตั้งแต่เดือนก่อนจนถึงวันนี้คิดเกี่ยวกับการฆ่าตัวตาย?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="finalQ3" value="6" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    ใช่
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="finalQ3" value="0" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    ไม่ใช่
+                </label>
+            </div>
+
+            <br>
+            <hr>
+            <br>
+
+            <label class="form-label">4. ตั้งแต่เดือนก่อนจนถึงวันนี้มีแผนการที่จะฆ่าตัวตาย?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="finalQ4" value="8" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    ใช่
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="finalQ4" value="0" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    ไม่ใช่
+                </label>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <label class="form-label">5. ตั้งแต่เดือนก่อนจนถึงวันนี้ได้เตรียมการที่จะทำร้ายตัวเองหรือเตรียม
+                การจะฆ่าตัวตายโดยตั้งใจว่าจะให้ตายจริงๆ?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="finalQ5" value="9" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    ใช่
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="finalQ5" value="0" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    ไม่ใช่
+                </label>
+            </div>
+
+            <br>
+            <hr>
+            <br>
+
+            <label class="form-label">6.
+                ตั้งแต่เดือนก่อนจนถึงวันนี้ได้ทำให้ตนเองบาดเจ็บแต่ไม่ตั้งใจที่ทำให้เสียชีวิต?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="finalQ6" value="4" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    ใช่
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="finalQ6" value="0" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    ไม่ใช่
+                </label>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <label class="form-label">7. ตั้งแต่เดือนก่อนจนถึงวันนี้ ได้พยายามฆ่าตัวตายโดยคาดหวัง/ตั้งใจที่
+                จะให้ตาย?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="finalQ7" value="10" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    ใช่
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="finalQ7" value="0" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    ไม่ใช่
+                </label>
+            </div>
+
+            <br>
+            <hr>
+            <br>
+
+            <label class="form-label">8. ตลอดชีวิตที่ผ่านมาท่านเคยพยายามฆ่าตัวตาย?</label>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="finalQ8" value="4" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    ใช่
+                </label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="finalQ8" value="0" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    ไม่ใช่
+                </label>
+            </div>
+            <br>
+            <hr>
+
+
+            <button type="submit" class="btn btn-primary">ส่งแบบประเมิน</button>
+        </form>
+
+
+        <!-- หน้าสำหรับแสดงผลลัพธ์ -->
+        <!-- <div id="resultPage" class="mt-5 text-center" style="display: none;">
+            <h2>ผลการประเมิน</h2>
+            <p id="resultMessage"></p>
+        </div> -->
+    </div>
+    <footer>
+        <p>&copy; 2024 Depression Assessment</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.13.3/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
